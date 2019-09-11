@@ -35,6 +35,10 @@ export default {
           SheetNames.forEach(name => {
            let worksheet = workbook.Sheets[name];
 
+           let data = XLSX.utils.sheet_to_json(worksheet);
+           console.log(data);
+           
+
           })
 
         };
@@ -73,7 +77,7 @@ export default {
       reader.readAsArrayBuffer(f);
     },
     confirm(){
-      
+
     }
   },
   mounted() {}
